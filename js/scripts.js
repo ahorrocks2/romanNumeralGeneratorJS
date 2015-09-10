@@ -68,3 +68,13 @@ function romans(num) {
 
 return result.join("");
 }
+
+$(document).ready(function() {
+  $("form").submit(function(event) {
+    var number = parseInt($("#input").val());
+    var result = romans(number);
+    $("#result").text(result);
+    $("#result").show();
+    event.preventDefault();
+  });
+});
